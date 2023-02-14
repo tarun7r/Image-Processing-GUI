@@ -1,14 +1,30 @@
-# Image-Processing-GUI
-Image Processing Tool made by me as a part of the EE610 Course
-
-<h1 dir="auto"><a id="user-content-gui" class="anchor" aria-hidden="true" href="#gui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>GUI</h1>
-<p dir="auto"><strong>Qt creator</strong> was used to design the ui, and convert it into <em>python</em> file. The Generated <em>python</em> file was then editted to add all the button signals and a few more elements like Matplotlib's <code>FeatureCanvas</code> and <code>Qpixmap</code> for displaying the image, with an option to switch between the two with <code>use_matplotlib_backend</code> flag at the start.</p>
-
-<p dir="auto"><code>MplCanvas</code> Class sets up the Matplotlib Canvas for Qt
-<code>Ui_MainWindow</code> Class sets up the main UI Window, with <code>setupUi()</code> method adding all the elements to it including Qwidgets, Qlayouts inside the Qwidgets and adding QButtons and other smaller elements inside the Layouts as designed in <strong>Qt Creator</strong> and things that were added later manually like <code>MlpCanvas</code></p>
-
-<p dir="auto"><code>imshow_()</code> method displays the passed image in Ui using the appropriate backend
-<code>update_history()</code> method clears the QTable and updates it with latest <code>history_text</code> from its <code>self.image</code> iImage object.</p>
-
-<p dir="auto"><code>checkout()</code> method lets the user checkout any saved image from <code>iImage.history</code> and is inspired by Git
-<code>set_buttons_bindings()</code> method sets up all the button and slider binding methods that are to be called when buttons are clicked or sliders are released.</p>
+<h1>Image Processing Assignment - Basic Image Editor</h1>
+	<p>This project aims to develop a basic image editor with a Graphical User Interface (GUI) that can handle color and grayscale images. The editor provides various image manipulation options, including equalization of histograms, gamma correction, log transformation, blurring, sharpening, and more. The editor also has an undo and redo feature and allows the user to save the current image.</p>
+	<h2>Features</h2>
+	<ul>
+		<li>Image display area</li>
+		<li>Image load button that opens a file selector.</li>
+		<li>Capability to handle color and grayscale images. Color images are converted to HSI/HSV or Lab, and only the I/V/L channel is manipulated.</li>
+		<li>Equalize histogram</li>
+		<li>Gamma correct (ask for input gamma upon pressing the button)</li>
+		<li>Log transform</li>
+		<li>Blur with a mechanism to control the extent of blurring</li>
+		<li>Sharpening with a mechanism to control the extent of sharpening</li>
+		<li>Undo all changes (revert to original image)</li>
+		<li>Save current image button</li>
+		<li>Additional feature (surprise!)</li>
+	</ul>
+	<h2>Team Features (Two-Person Teams Only)</h2>
+	<ul>
+		<li>Compute 2-D DFT and display magnitude and phase</li>
+		<li>Load a frequency magnitude mask</li>
+		<li>Compute and display modified image using the mask</li>
+	</ul>
+  <h2> Usage </h2>
+  <div class="highlight highlight-source-shell">
+    <pre><span class="pl-c">$</span> git clone https://https://github.com/tarun7r/Image-Processing-GUI.git
+<span class="pl-c">$</span> cd Image-Processing-GUI
+<span class="pl-c">$</span> python gui.py</pre>
+</div>
+<h2>Conclusion</h2>
+The image editor developed in this project is a basic tool that can handle color and grayscale images and provides a variety of manipulation options. Further improvements could include additional image processing options and an improved user interface.
